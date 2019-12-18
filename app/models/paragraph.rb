@@ -1,7 +1,7 @@
 class Paragraph
   include Mongoid::Document
 
-  belongs_to :article
+  embedded_in :article
 
   field :content, type: String
 end

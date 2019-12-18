@@ -1,7 +1,8 @@
 class Article
   include Mongoid::Document
+  include Mongoid::Timestamps
 
-  has_many :paragraphs
+  embeds_many :paragraphs
   accepts_nested_attributes_for :paragraphs
 
   field :name, type: String
